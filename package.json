@@ -1,0 +1,26 @@
+{
+  "name": "appium_for_stopwatch",
+  "version": "0.0.1",
+  "description": "appium project for stopwatch client ",
+  "main": "runServer.js",
+  "dependencies": {
+    "wd": "~0.2.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ez2sugul/appium_for_stopwatch.git"
+  },
+  "keywords": [
+    "stopwatch"
+  ],
+  "author": "seunghoon,baek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ez2sugul/appium_for_stopwatch/issues"
+  },
+  "homepage": "https://github.com/ez2sugul/appium_for_stopwatch"
+}
