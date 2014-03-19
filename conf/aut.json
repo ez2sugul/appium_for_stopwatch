@@ -1,0 +1,80 @@
+[
+{
+	"aut": {
+		"desired": {
+			"device": "Android",
+				"version": "4.3",
+				"app-package": "kr.co.ulike.tesports",
+				"app-activity": ".IntroActivity"
+		},
+			"senario": [
+			{
+				"action": "check",
+				"method": "tag",
+				"value": "CheckBox",
+				"event": ""
+			},
+			{
+				"action": "",
+				"method": "name",
+				"value": "확인"
+			}
+		]
+	}
+},
+{
+	"aut": {
+		"desired": {
+			"device": "Android",
+			"version": "4.3",
+			"app-package": "com.skt.skaf.l001mtm091",
+			"app-activity": "com.skt.tmap.activity.TmapIntroActivity"
+		},
+		"senario": [
+		{
+			"action": "loading",
+			"method": "tag",
+			"value": "CheckBox", 
+			"event": ""
+		},
+		{
+			"action": "",
+			"method": "name",
+			"value": "확인"
+		},
+		{
+			"method": "name",
+			"value": "확인"
+		}
+		]
+	}
+},
+{
+	"aut": {
+		"desired" : {
+			"device": "selendroid",
+			"version": "4.3",
+			"app": "/Users/skplanet/Documents/Projects/Nodejs/appium_test_01/com.skmnc.gifticon-1.apk",
+			"app-package": "com.skmnc.gifticon",
+			"app-activity": ".activity.MainActivity"
+		},
+		"senario": [
+		{
+			"action": "loading",
+			"method": "name",
+			"value": "확인",
+			"event": ""
+		},
+		{
+			"action": "",
+			"method": "name",
+			"value": "업데이트"
+		},
+		{
+			"method": "name",
+			"value": "확인"
+		}
+	]
+	}
+}
+]
