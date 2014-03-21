@@ -1,5 +1,6 @@
 # Linux 
 *.swp
+*.swo
 
 # Logs
 logs
