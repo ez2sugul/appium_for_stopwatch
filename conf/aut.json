@@ -7,19 +7,11 @@
 				"app-package": "kr.co.ulike.tesports",
 				"app-activity": ".IntroActivity"
 		},
-			"senario": [
-			{
-				"action": "check",
-				"method": "tag",
-				"value": "CheckBox",
-				"event": ""
-			},
-			{
-				"action": "",
-				"method": "name",
-				"value": "확인"
+			"senario": {
+				"begin" : [{"method":"name", "value":"Image", "next":"check-data-fee"}],
+				"check-data-fee": [{"method":"tag", "value":"CheckBox", "next":"confirm-data-fee"}],
+				"confirm-data-fee" : [{"method":"tag", "value":"CheckBox", "next":"confirm-data-fee"}]
 			}
-		]
 	}
 },
 {
