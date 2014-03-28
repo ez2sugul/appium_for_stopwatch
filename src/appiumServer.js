@@ -16,12 +16,12 @@ AppiumServer.prototype.run = function () {
 			});
 
 	this.child.stdout.on('data', function (data) {
-			//console.log("[SERVER] " + data);
+			console.log("[SERVER] " + new Date() + data);
 			});
 
 	this.child.stderr.on('data', function (data) {
 			var message = data.toString();
-			//console.log('[SERVER] ' + data);
+			console.log('[SERVER] ' + new Date() + data);
 
 			if (message.indexOf("desiredCapabilities") >= 0) {
 				console.log(message);
