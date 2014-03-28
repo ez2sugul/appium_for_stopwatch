@@ -4,13 +4,26 @@
 		"desired": {
 			"device": "Android",
 				"version": "4.3",
-				"app-package": "kr.co.ulike.tesports",
-				"app-activity": ".IntroActivity"
+				"app-package": "com.skt.skaf.l001mtm091",
+				"app-activity": "com.skt.tmap.activity.TmapIntroActivity"
 		},
 			"senario": {
-				"begin" : [{"method":"name", "value":"Image", "next":"check-data-fee"}],
-				"check-data-fee": [{"method":"tag", "value":"CheckBox", "next":"confirm-data-fee"}],
-				"confirm-data-fee" : [{"method":"tag", "value":"CheckBox", "next":"confirm-data-fee"}]
+				"begin" : [
+				{"method":"name", "value":"명칭/주소/전화번호 입력", "next":"search-do-not-show-again","view":"native","event":{"click":"1"}} 
+				],
+				"search-do-not-show-again" : [
+				{"method":"id", "value":"com.skt.skaf.l001mtm091:id/search_guide_check", "next":"search-guide-exit","view":"native","event":{"click":"1"}},
+				{"method":"name", "value":"명칭/주소/전화번호 입력", "next":"search-button","view":"native","event":{"key":"SK 플래닛"}}
+				],
+				"search-guide-exit" : [
+				{"method":"id", "value":"com.skt.skaf.l001mtm091:id/search_guide_btn_exit", "next":"input-key", "view":"native","event":{"click":"1"}}
+				],
+				"input-key" : [
+				{"method":"name", "value":"명칭/주소/전화번호 입력", "next":"search-button","view":"native","event":{"key":"SK 플래닛"}}
+				],
+				"search-button" : [
+				{"method":"id", "value":"com.skt.skaf.l001mtm091:id/qm_search_icon", "next":"","view":"native","event":{"click":"1"}}
+				]
 			}
 	}
 },
@@ -18,27 +31,19 @@
 	"aut": {
 		"desired": {
 			"device": "Android",
-			"version": "4.3",
-			"app-package": "com.skt.skaf.l001mtm091",
-			"app-activity": "com.skt.tmap.activity.TmapIntroActivity"
+				"version": "4.3",
+				"app-package": "kr.co.ulike.tesports",
+				"app-activity": ".IntroActivity"
 		},
-		"senario": [
-		{
-			"action": "loading",
-			"method": "tag",
-			"value": "CheckBox", 
-			"event": ""
-		},
-		{
-			"action": "",
-			"method": "name",
-			"value": "확인"
-		},
-		{
-			"method": "name",
-			"value": "확인"
-		}
-		]
+			"senario": {
+				"begin" : [
+				{"method":"name", "value":"LoL 리그", "next":"schedule","view":"native", "event":{"click":"1"}}
+				],
+				"schedule" : [
+				{"method":"id", "value":"kr.co.ulike.tesports:id/LeagueMiddleTabScheduleBtn2", "next":"league-a","view":"native", "event":{"click":"1"}},
+				{"method":"id", "value":"kr.co.ulike.tesports:id/LeagueMiddleTabScheduleBtn", "next":"","view":"native", "event":{"click":"1"}}
+				]
+			}
 	}
 },
 {
@@ -50,23 +55,33 @@
 			"app-package": "com.skmnc.gifticon",
 			"app-activity": ".activity.MainActivity"
 		},
-		"senario": [
-		{
-			"action": "loading",
-			"method": "name",
-			"value": "확인",
-			"event": ""
+		"senario": {
+				"begin" : [
+				{"method":"id", "value":"com.skmnc.gifticon:id/utilbar_get", "next":"gift","view":"webview", "event":{"click":"1"}} 
+				],
+				"gift" : [
+				{"method":"id", "value":"com.skmnc.gifticon:id/utilbar_home", "next":"","view":"webview", "event":{"click":"1"}}
+				]
+			}
+	}
+},
+{
+	"aut": {
+		"desired" : {
+			"device": "Android",
+			"version": "4.3",
+			"app-package": "com.sktelecom.hoppin.mobile",
+			"app-activity": "com.sktelecom.pmdevice.home.PMDHome"
 		},
-		{
-			"action": "",
-			"method": "name",
-			"value": "업데이트"
-		},
-		{
-			"method": "name",
-			"value": "확인"
-		}
-	]
+		"senario": {
+				"begin" : [
+				{"method":"id", "value":"com.sktelecom.hoppin.mobile:id/logo", "next":"tv","view":"native", "event":{"click":"1"}} 
+				],
+				"tv" : [
+				{"method":"name", "value":"TV", "next":"","view":"native", "event":{"click":"1"}}
+				]
+			}
 	}
 }
+
 ]
