@@ -1,4 +1,5 @@
 var spawn = require('child_process').spawn;
+var fs = require('fs');
 
 function AppiumServer(port) {
 		this.port = port;
@@ -6,7 +7,7 @@ function AppiumServer(port) {
 };
 
 AppiumServer.prototype.run = function () {
-	var appium = this;
+	var _this = this;
 	this.child = spawn('appium', [], {
 			//detached : true,
 			});
@@ -25,19 +26,19 @@ AppiumServer.prototype.run = function () {
 
 			if (message.indexOf("desiredCapabilities") >= 0) {
 				console.log(message);
-				appium.parseAutConfig(message);
+				_this.parseAutConfig(message);
 			} else if (message.indexOf("am ") >= 0) {
 				console.log(message);
-				if (appium.autConfig['device'] == "selendroid") {
+				if (_this.autConfig['device'] == "selendroid") {
 					if (message.indexOf("am instrument -e main_activity") >= 0) {
 						var startTime = new Date();
-						appium.setAutStartTime(startTime);
+						_this.setAutStartTime(startTime);
 						console.log(startTime.toString() + " " + startTime.getMilliseconds());
 					}
 				} else {
 					if (message.indexOf("am start -S") >= 0) {
 						var startTime = new Date();
-						appium.setAutStartTime(startTime);
+						_this.setAutStartTime(startTime);
 						console.log(startTime.toString() + " " + startTime.getMilliseconds());
 					}
 				}

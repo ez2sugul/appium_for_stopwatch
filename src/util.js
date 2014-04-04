@@ -1,7 +1,7 @@
 
 function dateDiff(newDate, oldDate) {
 	var datediff = newDate.getTime() - oldDate.getTime(); //store the getTime diff - or +
-	return (datediff / (24*60*60*1000)); //Convert values to -/+ days and return value      
+	return datediff; //Convert values to -/+ days and return value      
 }
 
 function swLog(message) {

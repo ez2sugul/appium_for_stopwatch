@@ -12,14 +12,14 @@
 				{"method":"name", "value":"명칭/주소/전화번호 입력", "next":"search-do-not-show-again","view":"native","event":{"click":"1"}} 
 				],
 				"search-do-not-show-again" : [
-				{"method":"id", "value":"com.skt.skaf.l001mtm091:id/search_guide_check", "next":"search-guide-exit","view":"native","event":{"click":"1"}},
-				{"method":"name", "value":"명칭/주소/전화번호 입력", "next":"search-button","view":"native","event":{"key":"SK 플래닛"}}
+				{"method":"name", "value":"명칭/주소/전화번호 입력", "next":"search-button","view":"native","event":{"key":"SK 플래닛"}},
+				{"method":"id", "value":"com.skt.skaf.l001mtm091:id/search_guide_check", "next":"search-guide-exit","view":"native","event":{"click":"1"}}
 				],
 				"search-guide-exit" : [
 				{"method":"id", "value":"com.skt.skaf.l001mtm091:id/search_guide_btn_exit", "next":"input-key", "view":"native","event":{"click":"1"}}
 				],
 				"input-key" : [
-				{"method":"name", "value":"명칭/주소/전화번호 입력", "next":"search-button","view":"native","event":{"key":"SK 플래닛"}}
+				{"method":"name", "value":"명칭/주소/전화번호 입력", "next":"search-button","view":"native","event":{"key":"SK"}}
 				],
 				"search-button" : [
 				{"method":"id", "value":"com.skt.skaf.l001mtm091:id/qm_search_icon", "next":"","view":"native","event":{"click":"1"}}

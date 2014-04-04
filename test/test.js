@@ -2,8 +2,8 @@ var assert = require("assert");
 var path = require("path");
 var fs = require("fs");
 var wd = require("wd");
-
-var Client = require(path.join(__dirname, "..", "src", "appiumClient.js"));
+var Watcher = require("stopwatch_watcher");
+var Client = require('stopwatch_client');
 
 describe('appium client', function(){
 		
@@ -57,8 +57,19 @@ describe('appium client', function(){
 				});
 		});
 		*/
-		describe("recursive", function () {
-				it("", );
-				});
 
+		});
+
+describe('watcher', function () {
+		describe("finish", function () {
+			it("", function () {
+				var watcher = new Watcher();
+				var resultStart = watcher.start("new");
+				for (var i = 0; i < 100000; i++) {
+					console.log(i);
+				}
+				var resultFinish = watcher.finish("new");
+				console.log(resultFinish);
+				});
+			});
 		});
