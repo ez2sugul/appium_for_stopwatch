@@ -9,20 +9,21 @@
 		},
 			"senario": {
 				"begin" : [
-				{"method":"name", "value":"명칭/주소/전화번호 입력", "next":"search-do-not-show-again","view":"native","event":{"click":"1"}} 
-				],
-				"search-do-not-show-again" : [
-				{"method":"name", "value":"명칭/주소/전화번호 입력", "next":"search-button","view":"native","event":{"key":"SK 플래닛"}},
-				{"method":"id", "value":"com.skt.skaf.l001mtm091:id/search_guide_check", "next":"search-guide-exit","view":"native","event":{"click":"1"}}
-				],
-				"search-guide-exit" : [
-				{"method":"id", "value":"com.skt.skaf.l001mtm091:id/search_guide_btn_exit", "next":"input-key", "view":"native","event":{"click":"1"}}
+				{"method":"name", "value":"명칭/주소/전화번호 입력", "next":"input-key","view":"native","event":{"click":"1"}} 
 				],
 				"input-key" : [
-				{"method":"name", "value":"명칭/주소/전화번호 입력", "next":"search-button","view":"native","event":{"key":"SK"}}
+				{"method":"name", "value":"명칭/주소/전화번호 입력", "next":"search-button","view":"native","event":{"key":"SK planet"}}
 				],
 				"search-button" : [
-				{"method":"id", "value":"com.skt.skaf.l001mtm091:id/qm_search_icon", "next":"","view":"native","event":{"click":"1"}}
+				{"method":"id", "value":"com.skt.skaf.l001mtm091:id/qm_search_icon", "next":"destination","view":"native","event":{"click":"1"}}
+				],
+				"destination" : [
+				{"method":"name", "value":"SK플래닛 본사", "next":"navi","view":"native","event":{"click":"1"}}
+				],
+				"navi" : [
+				{"method":"id", "value":"com.skt.skaf.l001mtm091:id/btn0", "next":"navi","view":"native","event":{"click":"1"}},
+				{"method":"id", "value":"com.skt.skaf.l001mtm091:id/naviStartBtn", "next":"navi","view":"native","event":{"click":"1"}},
+				{"method":"id", "value":"com.skt.skaf.l001mtm091:id/driving_around_infor", "next":"","view":"native","event":{"click":"1"}}
 				]
 			}
 	}

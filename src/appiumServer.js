@@ -1,13 +1,24 @@
 var spawn = require('child_process').spawn;
 var fs = require('fs');
+var path = require('path');
 
 function AppiumServer(port) {
 		this.port = port;
 		this.autConfig = {};
+		console.log(port);
+		this.autFile = path.join(__dirname, '../var', this.port.toString());
 };
 
 AppiumServer.prototype.run = function () {
 	var _this = this;
+
+	fs.open(this.autFile, 'w', function (err, fd) {
+			if (err) {
+				console.log(err);
+				return;
+			} 
+			fs.close(fd);
+		});
 	this.child = spawn('appium', [], {
 			//detached : true,
 			});
@@ -33,12 +44,18 @@ AppiumServer.prototype.run = function () {
 					if (message.indexOf("am instrument -e main_activity") >= 0) {
 						var startTime = new Date();
 						_this.setAutStartTime(startTime);
+						fs.writeFile(_this.autFile, startTime.getTime(), function (err) {
+							console.log(err);
+							});
 						console.log(startTime.toString() + " " + startTime.getMilliseconds());
 					}
 				} else {
 					if (message.indexOf("am start -S") >= 0) {
 						var startTime = new Date();
 						_this.setAutStartTime(startTime);
+						fs.writeFile(_this.autFile, startTime.getTime(), function (err) {
+							console.log(err);
+							});
 						console.log(startTime.toString() + " " + startTime.getMilliseconds());
 					}
 				}

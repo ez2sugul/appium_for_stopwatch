@@ -1,0 +1,59 @@
+[
+{
+	"aut": {
+		"desired" : {
+			"device": "Android",
+			"version": "4.3",
+			"app-package": "com.sktelecom.hoppin.mobile",
+			"app-activity": "com.sktelecom.pmdevice.home.PMDHome"
+		},
+		"senario": {
+				"begin" : [
+				{"method":"id", "value":"com.sktelecom.hoppin.mobile:id/logo", "next":"ani","view":"native", "event":{"click":"1"}} 
+				],
+				"ani" : [
+				{"method":"name", "value":"해외/애니", "next":"pick-a-item","view":"native", "event":{"click":"1"}}
+				],
+				"pick-a-item" : [
+				{"method":"name", "value":"호스티지 시즌 1", "next":"round-1","view":"native", "event":{"click":"1"}}
+				],
+				"round-1" : [
+				{"method":"name", "value":"[1회] 호스티지 시즌 1", "next":"watch-now","view":"native", "event":{"click":"1"}}
+				],
+				"watch-now" : [
+				{"method":"id", "value":"com.sktelecom.hoppin.mobile:id/contents_action_button_streaming", "next":"","view":"native", "event":{"click":"1"}}
+				]
+			}
+	}
+},
+{
+	"aut": {
+		"desired": {
+			"device": "Android",
+				"version": "4.3",
+				"app-package": "com.skt.skaf.l001mtm091",
+				"app-activity": "com.skt.tmap.activity.TmapIntroActivity"
+		},
+			"senario": {
+				"begin" : [
+				{"method":"name", "value":"명칭/주소/전화번호 입력", "next":"input-key","view":"native","event":{"click":"1"}},
+				{"method":"name", "value":"취소", "next":"begin","view":"native","event":{"click":"1"}}
+				],
+				"input-key" : [
+				{"method":"name", "value":"명칭/주소/전화번호 입력", "next":"search-button","view":"native","event":{"key":"SK planet"}}
+				],
+				"search-button" : [
+				{"method":"id", "value":"com.skt.skaf.l001mtm091:id/qm_search_icon", "next":"destination","view":"native","event":{"click":"1"}}
+				],
+				"destination" : [
+				{"method":"name", "value":"SK플래닛 본사", "next":"navi","view":"native","event":{"click":"1"}}
+				],
+				"navi" : [
+				{"method":"id", "value":"com.skt.skaf.l001mtm091:id/btn0", "next":"navi","view":"native","event":{"click":"1"}},
+				{"method":"id", "value":"com.skt.skaf.l001mtm091:id/naviStartBtn", "next":"navi","view":"native","event":{"click":"1"}},
+				{"method":"id", "value":"com.skt.skaf.l001mtm091:id/driving_around_infor", "next":"","view":"native","event":{"click":"1"}}
+				]
+			}
+	}
+}
+]
