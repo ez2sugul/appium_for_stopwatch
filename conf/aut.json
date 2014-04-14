@@ -1,0 +1,29 @@
+[
+{
+	"aut": {
+		"desired" : {
+			"device": "Android",
+			"version": "4.3",
+			"app-package": "com.sktelecom.hoppin.mobile",
+			"app-activity": "com.sktelecom.pmdevice.home.PMDHome"
+		},
+		"scenario": {
+				"begin" : [
+				{"method":"id", "value":"com.sktelecom.hoppin.mobile:id/logo", "next":"ani","view":"native", "event":{"click":"1"}} 
+				],
+				"ani" : [
+				{"method":"name", "value":"해외/애니", "next":"pick-a-item","view":"native", "event":{"click":"1"}}
+				],
+				"pick-a-item" : [
+				{"method":"name", "value":"호스티지 시즌 1", "next":"round-1","view":"native", "event":{"click":"1"}}
+				],
+				"round-1" : [
+				{"method":"name", "value":"[1회] 호스티지 시즌 1", "next":"watch-now","view":"native", "event":{"click":"1"}}
+				],
+				"watch-now" : [
+				{"method":"id", "value":"com.sktelecom.hoppin.mobile:id/contents_action_button_streaming", "next":"","view":"native", "event":{"click":"1"}}
+				]
+			}
+	}
+}
+]
